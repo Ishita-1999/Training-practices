@@ -1,0 +1,35 @@
+import java.util.*;
+ class Main
+ {
+      public static void main(String[] args)  
+          
+    {
+     Scanner d=new Scanner(System.in);
+     int c=0;
+          int a,int b;
+        System.out.print("Enter the first value");
+         a=d.nextInt();
+        System.out.print("Enter the second value");
+         b=d.nextInt();
+        
+        if((b%2==0)&&(b%a==0))
+        {
+            int c=b/a;
+            
+            
+            System.out.print("Even and is multiple of the first value  "+ c+"times");
+        }
+        else if ((b%2==0) &&(b%a!=0))
+        {
+            System.out.print("Even but not a multiple of the first value");
+        }
+        else
+        {
+             System.out.print("Neither Even nor multiple of first value");
+        }
+        
+        }
+        
+    }
+   
+ 
