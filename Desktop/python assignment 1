@@ -1,0 +1,39 @@
+name=["Aman", "Ram", "Manav"]
+phy=[99, 96 ,24]
+maths=[100, 96, 67]
+chem=[97, 34, 78]
+pas=[]
+fail=[]
+reappear=[]
+grade=[]
+
+
+for i in range(0,3):
+    print(name[i])
+    print(phy[i])
+    print(maths[i])
+    print(chem[i])
+    if (phy[i]>=40 and maths[i]>=40) or (chem[i]>=40 and maths[i]>=40) or (phy[i]>=40 and chem[i]>=40):
+        pas.append(name[i])
+        total=phy[i]+maths[i]+chem[i]
+        percentage=(total/300)*100
+        grade.append(percentage)
+        if phy[i]<40 or maths[i]<40 or chem[i]<40:
+            reappear.append(name[i])
+    else:
+        fail.append(name[i])
+
+print("1. List of students failed in more than two subjects: \n",fail)
+ 
+print("2. List of students failed in one subject: \n",reappear)
+print("3. Overall class performance: \n")
+for i in pas:
+    if (grade[pas.index(i)])>=80:
+        print(i,"Distinction",grade[pas.index(i)],"%")
+    elif (grade[pas.index(i)])>=60 and (grade[pas.index(i)])<80:
+        print(i,"First ",grade[pas.index(i)],"%")
+    elif (grade[pas.index(i)])>=50 and (grade[pas.index(i)])<60:
+        print(i,"Second ",grade[pas.index(i)],"%")
+    else:
+        print(i,"fails")
+       
